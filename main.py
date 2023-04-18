@@ -19,21 +19,6 @@ logger = logging.getLogger(__name__)
 api_connector = ApiConnector()
 
 async def msg_handler(update, context):
-    '''
-    data:
-    {
-        'Id': 87, 
-        'AccountId': 'Vikram', 
-        'Card': '777-888-888', 
-        'Bank': 'bank5', 
-        'Summ': 38.54, 
-        'Currency': 'USD', 
-        'Status': 'waiting', 
-        'User': '', 
-        'DateCreate': '2023-04-10 08:09:42', 
-        'DateUpdate': '2023-04-10 08:09:42'
-    }
-    '''
     if update.effective_user.id == 1111111 and update.effective_user.username == 'WebhookMessageSender':
         msg_data = update.message.text
         webt_id, _, webt_card_number, webt_bank, webt_sum, webt_currency, webt_status, webt_user, _, _ = \
