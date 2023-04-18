@@ -40,21 +40,6 @@ def get_webtransaction_id_from_callback_string(callback_string: str) -> int:
 
 
 def unpack_webtransaction_data(webtransaction_data: dict) -> tuple:
-    '''
-    webtransaction_data:
-    {
-        'Id': 122,
-        'AccountId': 'Vikram',
-        'Card': '1234-5678-9012-3456',
-        'Bank': 'test',
-        'Summ': 111.11,
-        'Currency': 'UAH',
-        'Status': 'waiting',
-        'User': '',
-        'DateCreate': '2023-04-12 17:16:05',
-        'DateUpdate': '2023-04-12 17:16:05'
-    }
-    '''
     webt_id = webtransaction_data.get('Id')
     webt_account_id = webtransaction_data.get('AccountId')
     webt_card_number = webtransaction_data.get('Card')
