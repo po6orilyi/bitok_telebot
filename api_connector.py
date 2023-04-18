@@ -151,32 +151,3 @@ class ApiConnector:
         with open(filename, 'wb') as f:
             f.write(data)
             return True
-
-
-
-
-
-
-
-if __name__ == '__main__':
-
-    obj = ApiConnector()
-
-    ### GET TRANSACTION INFO
-    print(obj.get_transaction_info(transaction_id=216))
-
-    ### CREATE NEW TRANSACTION
-    # print(obj.add_new_transaction(account_id='test_account_id', card_number='5555444433332222', bank_name='TEST BANK', transaction_sum=123.45, currency='UAH'))
-
-    ### DELETE TRANSACTION
-    # print(obj.delete_transaction(transaction_id=74))
-
-    ### UPDATE_TRANSACTION_INFO
-    # print(obj.update_transaction_info(transaction_id=124, User='YOOYO', Status='process'))
-
-'''
-webhook data example:
-
-{'Id': 87, 'AccountId': 'Vikram', 'Card': '777-888-888', 'Bank': 'bank5', 'Summ': 38.54, 'Currency': 'USD', 'Status': 'waiting', 'User': '', 'DateCreate': '2023-04-10 08:09:42', 'DateUpdate': '2023-04-10 08:09:42'}
-
-'''
